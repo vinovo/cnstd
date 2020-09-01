@@ -3,7 +3,7 @@ import os
 from setuptools import find_packages, setup
 from pathlib import Path
 
-PACKAGE_NAME = "cnstd"
+PACKAGE_NAME = "memegle-cnstd"
 
 here = Path(__file__).parent
 
@@ -42,13 +42,13 @@ cnstd = cnstd.cli:cli
 setup(
     name=PACKAGE_NAME,
     version=about['__version__'],
-    description="Simple package for Chinese STR (Scene Text Recognition), with small pretrained models",
+    description="Chinese STR adapted for use by Memegle",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author='breezedeus',
-    author_email='breezedeus@163.com',
+    author='Paul Zhu',
+    author_email='zhz433@ucsd.edu',
     license='Apache 2.0',
-    url='https://github.com/breezedeus/cnstd',
+    url='https://github.com/vinovo/cnstd',
     platforms=["Mac", "Linux", "Windows"],
     packages=find_packages(),
     entry_points=entry_points,
