@@ -3,7 +3,9 @@ import os
 from setuptools import find_packages, setup
 from pathlib import Path
 
-PACKAGE_NAME = "memegle-cnstd"
+# https://packaging.python.org/tutorials/packaging-projects/
+
+PACKAGE_NAME = "memegle_cnstd"
 
 here = Path(__file__).parent
 
