@@ -48,7 +48,7 @@ class CnStd(object):
 
     def __init__(
         self,
-        model_name='mobilenetv3',
+        model_name='resnet50_v1b',
         model_epoch=None,
         root=data_dir(),
         context='cpu',
@@ -324,10 +324,10 @@ def crop_rect(img, rect, height_border=0.05, width_border=0.0):
     )
     center = (int(center[0]), int(center[1]))
 
-    if 1.5 * sizes[0] < sizes[1]:
-        sizes = (sizes[1], sizes[0])
-        angle += 90
-    elif angle < -45 and (0.66 < sizes[0] / (1e-6 + sizes[1]) < 1.5):
+    # if 1.5 * sizes[0] < sizes[1]:
+    #     sizes = (sizes[1], sizes[0])
+    #     angle += 90
+    if angle < -45 and (0.66 < sizes[0] / (1e-6 + sizes[1]) < 1.5):
         sizes = (sizes[1], sizes[0])
         angle -= 270
 
