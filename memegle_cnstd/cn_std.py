@@ -327,9 +327,9 @@ def crop_rect(img, rect, height_border=0.05, width_border=0.0):
     # if 1.5 * sizes[0] < sizes[1]:
     #     sizes = (sizes[1], sizes[0])
     #     angle += 90
-    if angle < -45 and (0.66 < sizes[0] / (1e-6 + sizes[1]) < 1.5):
-        sizes = (sizes[1], sizes[0])
-        angle -= 270
+    # elif angle < -45 and (0.66 < sizes[0] / (1e-6 + sizes[1]) < 1.5):
+    #     sizes = (sizes[1], sizes[0])
+    #     angle -= 270
 
     height, width = img.shape[0], img.shape[1]
     # 先把中心点平移到图片中心，然后再旋转就不会截断图片了
